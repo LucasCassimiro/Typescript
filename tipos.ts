@@ -48,3 +48,25 @@ criar({
 })
 //criar('Lucas') // Dá erro
 
+// Never
+function loopInfinito(): never {
+    while(true) {
+
+    }
+}
+
+function erro(mensagem: string): never {
+    throw new Error(mensagem);
+}
+
+function falha(): never{
+    return erro('Algo falhou');
+}
+
+// Union Types
+function exibirNota(nota: number | string) {
+    console.log(`A nota é ${nota}`);
+}
+
+exibirNota('10');
+exibirNota(10);
